@@ -29,6 +29,10 @@ public class Base {
         driver.findElement(By.xpath("//input[@id='txtUsername']")).sendKeys(data.username);
         driver.findElement(By.xpath("//input[@id='txtPassword']")).sendKeys(data.password);
         driver.findElement(By.xpath("//input[@id='btnLogin']")).click();
+
+        // Navigate to 'Add Employee' page
+        driver.findElement(By.xpath("//a[@id='menu_pim_viewPimModule']")).click();
+        driver.findElement(By.xpath("//a[@id='menu_pim_addEmployee']")).click();
     }
 
     @AfterClass
